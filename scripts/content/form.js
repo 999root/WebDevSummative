@@ -5,7 +5,7 @@ const section = document.querySelector("#form");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    //signup
+    //loading the form
     fetch(formList)
         .then(response => response.json())
         .then(a => {
@@ -15,19 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             for (i of a) {
-                if (i.type === "button") {
-
-
-                    let input = document.createElement("input");
-                    input.setAttribute("type", i.type);
-                    input.setAttribute("id", i.id);
-                    input.setAttribute("name", i.name);
-                    input.setAttribute("value", i.label);
-                    input.setAttribute("onclick", i.onclick)
-                    form.appendChild(input);
-
-
-                } else if (i.type === "submit") {
+                if (i.type === "submit") {
                     let input = document.createElement("input");
                     input.setAttribute("type", i.type);
                     input.setAttribute("value", i.label);
@@ -49,10 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     form.appendChild(input);
 
                 }
-                if (i.type != "email") {
-                    form.appendChild(document.createElement("br"));
-                    form.appendChild(document.createElement("br"));
-                }
+
+                form.appendChild(document.createElement("br"));
+                form.appendChild(document.createElement("br"));
+
             }
 
 

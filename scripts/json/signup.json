@@ -21,14 +21,6 @@
                 "name": "email"
         },
         {
-                "label": "Verify",
-                "for": "verification",
-                "type": "button",
-                "id": "Verification",
-                "name": "Verificiation",
-                "onclick": ""
-        },
-        {
                 "label": "Comments",
                 "for": "comments",
                 "type": "text",

@@ -12,23 +12,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/nav.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/all-pages.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/logo.css">
+
 
     <!-- Scripts -->
-    <script src="scripts/navigation/nav.js" defer></script>
+    <script src="scripts/navigation/navbar.js" defer></script>
     <script src="scripts/content/header.js" defer></script>
     <script src="scripts/content/app.js" defer></script>
     <script src="scripts/content/index.js" defer></script>
-    <script src="scripts/signup/signup.js" defer></script>
+    <script src="scripts/content/form.js" defer></script>
 
 </head>
 
 <body>
     <header>
-        <img id = "logo">
+        <img id="logo">
         <h1 id="title"></h1>
     </header>
 
@@ -36,7 +37,7 @@
         <nav>
             <button class="menu-toggle">☰</button>
             <ul>
-                <li  id="home-page-nav-link"><a></a></li>
+                <li id="home-page-nav-link"><a></a></li>
                 <li id="about-page-nav-link"><a></a></li>
                 <li id="missions-nav-links">
                     <a></a>
@@ -46,7 +47,7 @@
                         <li><a></a></li>
                     </ul>
                 </li>
-                <li class = "active" id="contact-page-nav-link"><a></a></li>
+                <li class="active" id="contact-page-nav-link"><a></a></li>
             </ul>
         </nav>
 
@@ -54,12 +55,12 @@
         <section id="form">
             <h1 id="form_title"></h1>
             <form method="post" action='/login'>
-                
+
             </form>
         </section>
 
         <div id="verify_message"></div>
-        
+
 
 
     </main>

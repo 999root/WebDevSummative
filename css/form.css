@@ -26,7 +26,7 @@ section{
 form{
     padding: 0 5%;
 }
-
+/*form contents*/
 label{
     font-size: 3vh;
     margin: 0 10px 0 0;
@@ -39,23 +39,6 @@ input{
     height: 4vh;
     
     
-}
-
-input[type = "button"]{
-    float: right;
-    width: 5vw;
-    background-color: #458588;
-    border-radius: 8px;
-    font-size: 17;
-    font-family: "Montserrat", sans-serif;
-    color: white;
-}
-input[type = "button"]:hover{
-    transform: scale(1.05);
-    border-color: #a3be8c;
-}
-input[type = "email"]{
-    width: 30vw;
 }
 
 input[type="submit"]{
@@ -74,6 +57,8 @@ input[type="submit"]:hover{
     border-color: #a3be8c;
     
 }
+
+/*img section*/
 div{
     display: inline-block;
     padding: 0;
@@ -103,19 +88,6 @@ div>img{
 }
 
 
-/*#overlay{
-    position: absolute;
-    background-color: rgb(76 76 76 / 47%);
-    z-index: 1;
-    left: 0;
-    top: 50;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    
-      
-}*/
-
 @media (max-width: 786px){
     section{
         margin: 0 3vw;
@@ -129,15 +101,6 @@ div>img{
        margin: 0; 
        padding: 0;
    }
-    input[type = "email"]{
-        width: 49vw;
-        margin: 0 0 0 4vw;
-        
-    }
-    input[type="button"]{
-        width: 15vw;
-        height: 5vh;
-    }
     input[type = "submit"]{
         width: 50vw;
         height: 9vh;
