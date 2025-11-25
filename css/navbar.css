@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* NAVIGATION BAR */
+nav {
+  background-color: #458588;
+  padding: 20px;
+  /*text-align: center;*/
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+/* Nav List */
+nav ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+/* Top-level items */
+nav ul li {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Vertical dividers 
+nav ul li:not(:first-child) {
+  border-left: 2px solid white;
+}*/
+
+/* Links */
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 12px 28px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  min-width: 60px; /* ensures clickable area even before text loads */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  background-color: #3a767a;
+}
+
+/* Dropdown Menu */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #356f72;
+  min-width: 200px;
+  border-radius: 4px;
+  text-align: left;
+  z-index: 999;
+  padding: 8px 0;
+}
+
+nav ul li ul li {
+  display: block;
+  border: none;
+}
+
+nav ul li ul li a {
+  padding: 10px 16px;
+  color: white;
+  display: block;
+}
+
+nav ul li ul li a:hover {
+  background-color: #2e5c5f;
+}
+
+/* Show submenu on hover */
+nav ul li:hover > ul {
+  display: block;
+}
+
+/* Active tab indicator */
+.active {
+  border-bottom: 3px solid white;
+}
+
+/* Hide hamburger on large screens */
+.menu-toggle {
+  display: none;
+}
+
+/* ===================== */
+/* RESPONSIVE MENU BELOW */
+/* ===================== */
+@media only screen and (max-width: 786px) {
+  nav {
+    padding: 10px 20px;
+    text-align: left;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+  }
+
+  /* Hide menu by default */
+  nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #458588;
+  }
+
+  /* Show menu when active */
+  nav.active ul {
+    display: flex;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: left;
+    width: 100%;
+    border: none;
+  }
+
+  nav ul li:not(:first-child) {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  /* Dropdown in mobile */
+  nav ul li ul {
+    position: static;
+    display: none;
+    background-color: #356f72;
+    border-radius: 0;
+  }
+
+  nav ul li:hover > ul {
+    display: block;
+  }
+}

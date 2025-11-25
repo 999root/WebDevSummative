@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  height: 100px;
+  align-items: center;
+  line-height: 200%;
+  padding: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: #458588;
+  padding: 30px 80px;
+  color: white;
+  display: flex;                    /* Make footer itself a flex container */
+  justify-content: space-between;   /* Place the two lists side by side */
+  align-items: flex-start;
+  flex-wrap: wrap;                  /* Stack them on smaller screens */
+  gap: 40px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Target both footer-link-list divs */
+footer > #footer-link-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+/* Buttons inside links */
+footer > #footer-link-list a button {
+  display: inline-block;
+  width: 240px;
+  height: 45px;
+  font-weight: bold;
+  color: white;
+  background-color: #a3be8c;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for buttons */
+footer > #footer-link-list a button:hover {
+  background-color: #cbe5b1;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Style icons inside the second footer-link-list */
+footer > #footer-link-list a i {
+  font-size: 1.8rem;
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover on icons */
+footer > #footer-link-list a i:hover {
+  color: #cbe5b1;
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+footer > #footer-link-list p {
+  color: white;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === Responsive layout for mobile === */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 30px 50px;
+  }
+
+  footer > #footer-link-list {
+    align-items: center;
+  }
+}

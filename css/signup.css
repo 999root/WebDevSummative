@@ -1,0 +1,151 @@
+/* ================================
+   SIGNUP PAGE STYLES
+   (Consistent with Home Page)
+================================ */
+
+/* Page layout */
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  background-color: #f8f8f8;
+}
+
+/* Section heading */
+main section h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2e3440;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Form container */
+form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Fieldset + legend */
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2e3440;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Labels and inputs */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+label input,
+label textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #dcdcdc;
+  border-radius: 10px;
+  outline: none;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+label input:focus,
+label textarea:focus {
+  border-color: #a3be8c;
+  box-shadow: 0 0 0 3px rgba(163, 190, 140, 0.25);
+  background-color: #fff;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Submit button */
+.submitbutton {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #a3be8c;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitbutton:hover {
+  background-color: #bcd9a2;
+  transform: translateY(-3px);
+}
+
+/* Confirmation message */
+#confirmMessage {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+  main section {
+    padding: 3rem 1.5rem;
+  }
+
+  form {
+    padding: 2rem 1.5rem;
+  }
+
+  main section h1 {
+    font-size: 1.8rem;
+  }
+
+  legend {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  label input,
+  label textarea {
+    font-size: 0.95rem;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .submitbutton {
+    font-size: 1rem;
+  }
+}

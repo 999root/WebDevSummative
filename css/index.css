@@ -1,0 +1,306 @@
+/* ================================
+   GLOBAL STYLES
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+#hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+#hero-title h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2e3440;
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   POWERPOINT SLIDESHOW
+================================ */
+#powerpoint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#powerpoint > figure {
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+#powerpoint > figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transform: translateX(0);
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+/* ================================
+   GOALS SECTION
+================================ */
+#goal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  /*background-color: #fafafa;*/
+}
+
+.goal-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.goal-box {
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.goal-box i {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.goal-box-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ================================
+   VIEW ALL BUTTON
+================================ */
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+#button-container a button {
+  width: 180px;
+  height: 48px;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+  background-color: #a3be8c;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#button-container a button:hover {
+  cursor: pointer;
+  background-color: #bcd9a2;
+  transform: translateY(-3px);
+}
+
+/* ================================
+   INFO SECTION (Zig-Zag Layout)
+================================ */
+.info-section {
+  background-color: #f8f8f8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.info-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e3440;
+  margin-bottom: 3rem;
+}
+
+/* Row container */
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+/* Row 2 (reverse direction) */
+.info-row.row-2 {
+  flex-direction: row-reverse;
+}
+
+/* Image styling */
+.info-row img {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-row img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Text styling */
+.info-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.info-text h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.info-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #powerpoint > figure {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 900px) {
+  .info-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-row.row-2 {
+    flex-direction: column;
+  }
+
+  .info-row img,
+  .info-text {
+    max-width: 90%;
+  }
+
+  .info-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .info-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 786px) {
+  #hero-title h1 {
+    font-size: 2rem;
+  }
+
+  #goal-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .goal-link {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .goal-box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    padding: 16px 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .goal-box i {
+    font-size: 2rem;
+  }
+
+  .goal-box-title {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  #powerpoint > figure {
+    max-width: 100%;
+  }
+
+  #powerpoint {
+    padding: 1rem 0;
+  }
+}
