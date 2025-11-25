@@ -1,37 +1,42 @@
 <html>
-    <head>
-        <title>Sustainability</title>
 
-        <!-- Meta Tags -->
-        <meta charset="UTF-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<head>
+    <title>Sustainability</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/navbar.css">
-        <link rel="stylesheet" type="text/css" href="css/all-pages.css">
-        <link rel="stylesheet" type="text/css" href="css/signup.css">
-        <link rel="stylesheet" type="text/css" href="css/text.css">
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        <!-- Scripts -->
-        <script src="scripts/navigation/navbar.js" defer></script>
-        <script src="scripts/content/header.js" defer></script>
-        <script src="scripts/content/app.js" defer></script>
-        <script src="scripts/content/signup.js" defer></script>
-    </head>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
 
-    <body>
-        <header>
-            <h1 id="title"></h1>
-        </header>
+    <!-- Scripts -->
+    <script src="scripts/navigation/nav.js" defer></script>
+    <script src="scripts/content/header.js" defer></script>
+    <script src="scripts/content/app.js" defer></script>
+    <script src="scripts/content/index.js" defer></script>
+    <script src="scripts/signup/signup.js" defer></script>
 
+</head>
+
+<body>
+    <header>
+        <img id = "logo">
+        <h1 id="title"></h1>
+    </header>
+
+    <main>
         <nav>
-            <button class="menu-toggle"></button>
+            <button class="menu-toggle">☰</button>
             <ul>
-                <li id="home-page-nav-link"><a></a></li>
+                <li  id="home-page-nav-link"><a></a></li>
                 <li id="about-page-nav-link"><a></a></li>
                 <li id="missions-nav-links">
                     <a></a>
@@ -41,30 +46,41 @@
                         <li><a></a></li>
                     </ul>
                 </li>
-                <li id="contact-page-nav-link"><a></a></li>
+                <li class = "active" id="contact-page-nav-link"><a></a></li>
             </ul>
         </nav>
 
-        <main>
 
-            <section>
+        <section id="form">
+            <h1 id="form_title"></h1>
+            <form method="post" action='/login'>
+                
+            </form>
+        </section>
 
-                <h1></h1>
+        <div id="verify_message"></div>
+        
 
-                <form>
-                    <fieldset>
-                        <legend>Newsletter Sign Up!</legend>
-                        <label for="name">Name*<input type="text" name="name" id="name" /></label>
-                        <label for="email">Email*<input type="email" name="email" id="email" /></label>
-                        <label for="comment">Message*<textarea id="message"></textarea></label>
-                        <input type="submit" value="Send Message" class="submitbutton"></input>
-                        <p id="confirmMessage">* Required Field</p>
-                    </fieldset>
-                </form>
 
-            </section>
+    </main>
+    <footer>
+        <div id="footer-link-list">
+            <a id="copyright-button"><button></button></a>
+            <a id="contact-button"><button></button></a>
+            <a id="privacy-policy-button"><button></button></a>
+            <a id="tos-button"><button></button></a>
+        </div>
 
-        </main>
+        <div id="footer-link-list">
+            <p>Follow us:</p>
+            <a id="insta"><i></i></a>
+            <a id="twitter"><i></i></a>
+            <a id="facebook"><i></i></a>
+        </div>
+    </footer>
 
-    </body>
+
+
+</body>
+
 </html>
