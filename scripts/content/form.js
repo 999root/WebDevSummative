@@ -5,7 +5,7 @@ const section = document.querySelector("#form");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    //loading the form
+    //loading the form from json
     fetch(formList)
         .then(response => response.json())
         .then(a => {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const header = document.querySelector("#form_title");
             header.textContent = "Sign up to recieve the latest news!";
 
-
+            
             for (i of a) {
                 if (i.type === "submit") {
                     let input = document.createElement("input");
@@ -32,21 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     input.setAttribute("type", i.type);
                     input.setAttribute("id", i.id);
                     input.setAttribute("name", i.name);
-                    input.setAttribute("required", "");
-                    console.log("name " + input.getAttribute("name"));
-                    form.appendChild(input);
+                    
+                    if (i.id != "comments") {
+                        input.setAttribute("required", "");
+                    }
 
+                    form.appendChild(input);
                 }
 
                 form.appendChild(document.createElement("br"));
                 form.appendChild(document.createElement("br"));
-
             }
-
-
         })
         .then(() => {
-            //submit listener - not done yet
+            //submit listener - for now it just takes the values...i think :3
             let first_name = document.querySelector("#first_name");
             let last_name = document.querySelector("#last_name");
             let email = document.querySelector("#email");
@@ -55,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.addEventListener("submit", (event) => {
 
                 event.preventDefault();
+                //test
                 console.log(first_name.value);
 
                 const submitBody = {
@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     comments: comments.value
                 };
 
+                //test
                 console.log(submitBody);
 
                 const requestHeader = {
@@ -78,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
                     .then(response => response.json())
                     .then(info => {
+                        //test
                         console.log(info);
                         console.log(info.first_name, info.last_name, info.email, info.comments);
                     });
@@ -85,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
 
-    //images
+    //images..if you couldnt tell by the name idk
     fetch(imageList)
         .then(response => response.json())
         .then(img => {
@@ -109,17 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/*fetch(verMessage)
-.then(response => response.json())
-.then(message => {
-    let close_button = document.createElement("button");
-    close_button.setAttribute("id", "close_button");
-    close_button.textContent = "X";
-    verify_message.appendChild(close_button);
-    
-
-
-})*/
 
 
 

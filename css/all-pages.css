@@ -27,16 +27,41 @@ footer {
   background-color: #458588;
   padding: 30px 80px;
   color: white;
-  display: flex;                    /* Make footer itself a flex container */
-  justify-content: space-between;   /* Place the two lists side by side */
+  display: flex;
+  /* Make footer itself a flex container */
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
   align-items: flex-start;
-  flex-wrap: wrap;                  /* Stack them on smaller screens */
+  flex-wrap: wrap;
+  /* Stack them on smaller screens */
   gap: 40px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/*footer content*/
+li>h3 {
+  text-decoration: underline;
+}
+
+.footer_list {
+  list-style-type: none;
+}
+
+.footer_list a {
+  color: white;
+}
+
+.social_media_links {
+  display: inline-block;
+  padding: 0 4%
+  
+}
+
+
+
+
 /* Target both footer-link-list divs */
-footer > #footer-link-list {
+footer>#footer-link-list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -44,7 +69,7 @@ footer > #footer-link-list {
 }
 
 /* Buttons inside links */
-footer > #footer-link-list a button {
+footer>#footer-link-list a button {
   display: inline-block;
   width: 240px;
   height: 45px;
@@ -60,27 +85,27 @@ footer > #footer-link-list a button {
 }
 
 /* Hover effect for buttons */
-footer > #footer-link-list a button:hover {
+footer>#footer-link-list a button:hover {
   background-color: #cbe5b1;
   transform: scale(1.05);
   cursor: pointer;
 }
 
 /* Style icons inside the second footer-link-list */
-footer > #footer-link-list a i {
+footer>#footer-link-list a i {
   font-size: 1.8rem;
   color: white;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 /* Hover on icons */
-footer > #footer-link-list a i:hover {
+footer>#footer-link-list a i:hover {
   color: #cbe5b1;
   transform: scale(1.15);
   cursor: pointer;
 }
 
-footer > #footer-link-list p {
+footer>#footer-link-list p {
   color: white;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
@@ -95,7 +120,35 @@ footer > #footer-link-list p {
     padding: 30px 50px;
   }
 
-  footer > #footer-link-list {
+   ul{
+  padding: 0 10vw 1vh 10vw;
+  margin: 2vh 0 0 0;
+  border-bottom: solid;
+}
+li>h3{
+  text-decoration: underline;
+  text-align: center;
+}
+  li{
+    padding: 0 0 2vh 0;
+  }
+
+.footer_list{
+  list-style-type: none;
+  text-align: center;
+  color: #ffffff;
+
+}
+
+ .social_media_links{
+   display: block;
+   padding: 0 0 20% 0 ;
+ } 
+
+
+
+
+  footer>#footer-link-list {
     align-items: center;
   }
 }

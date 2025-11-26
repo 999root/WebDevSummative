@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Explore",
+        "class": "explore",
+        "links": [
+            {"context": "Home page", "href": "/index.html"},
+            {"context": "Goals", "href": "/"},
+            {"context": "Sign-up", "href": "/signup.html"},
+            {"context": "Meet the team", "href": "/"}
+        ]
+    },
+    {
+        "title": "Useful Links",
+        "class": "useful_links",
+        "links": [
+            {"context": "Copyright", "href": ""},
+            {"context": "Fraud alert", "href": ""},
+            {"context": "Privacy notice", "href": ""},
+            {"context": "Terms of Service", "href": ""}
+
+        ]
+    },
+    {
+        "title": "Contact",
+        "class": "contact",
+        "links": [
+            {"context": "Email: dconews@un.org", "href": "mailto:dconews@un.org"},
+            {"context": "Address: United Nations Headquarters<br>405 East 42nd Street, 25th<br>Floor New York, NY, 10017, US", "href": "https://maps.app.goo.gl/2z8nLTA4cBVrbuE66"}
+        ]
+        
+    },
+    {
+        "title": "Social media links:",
+        "class": "social_media_links",
+        "links": [
+            {"context": "Instagram", "href": "https://www.instagram.com/theglobalgoals/?hl=bg", "icon_class": "fa-brands fa-instagram fa-2x"},
+            {"context": "Twitter", "href": "https://x.com/GlobalGoalsUN", "icon_class": "fa-brands fa-x-twitter fa-2x"},
+            {"context": "Facebook", "href": "https://www.facebook.com/globalgoalsUN/", "icon_class": "fa-brands fa-facebook fa-2x"}
+        ]
+        
+    }
+]
