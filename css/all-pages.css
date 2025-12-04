@@ -35,67 +35,83 @@ footer {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Target both footer-link-list divs */
-footer > #footer-link-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
+/* Footer base */
+footer {
+    background: #458588;
+    color: #e5e5e5;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
-/* Buttons inside links */
-footer > #footer-link-list a button {
-  display: inline-block;
-  width: 240px;
-  height: 45px;
-  font-weight: bold;
-  color: white;
-  background-color: #a3be8c;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+/* Each column */
+.footer_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    flex: 1 1 200px;
 }
 
-/* Hover effect for buttons */
-footer > #footer-link-list a button:hover {
-  background-color: #cbe5b1;
-  transform: scale(1.05);
-  cursor: pointer;
+/* Column title */
+.footer_list h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
 }
 
-/* Style icons inside the second footer-link-list */
-footer > #footer-link-list a i {
-  font-size: 1.8rem;
-  color: white;
-  transition: color 0.3s ease, transform 0.2s ease;
+/* List items */
+.footer_list li {
+    margin-bottom: 0.6rem;
 }
 
-/* Hover on icons */
-footer > #footer-link-list a i:hover {
-  color: #cbe5b1;
-  transform: scale(1.15);
-  cursor: pointer;
+/* Links / text */
+.footer_list a,
+.footer_list p {
+    color: #b5b5b5;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
 }
 
-footer > #footer-link-list p {
-  color: white;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+/* Hover states */
+.footer_list a:hover {
+    color: #ffffff;
 }
 
-/* === Responsive layout for mobile === */
+/* Social icons */
+.footer_list i {
+    font-size: 1.4rem;
+    margin-right: 0.75rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer_list a:hover i {
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* Horizontal layout for social icons only */
+.footer_list li[class*="social"] {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+/* Responsive behavior */
 @media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 30px 50px;
-  }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  footer > #footer-link-list {
-    align-items: center;
-  }
+    .footer_list {
+        width: 100%;
+    }
+
+    .footer_list li[class*="social"] {
+        display: inline-block;
+    }
 }
