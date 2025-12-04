@@ -27,9 +27,11 @@ contactlink.href = contact.href;
 
 // Missions Link
 const missionspages = document.getElementById('missions-nav-links');
-const missionlink = missionspages.querySelector('a');
-missionlink.innerHTML = 'Missions <i class="fa-solid fa-caret-down"></i>';
-missionlink.href = '#';
+if (missionspages) {
+  const missionlink = missionspages.querySelector('a');
+  missionlink.innerHTML = 'Missions <i class="fa-solid fa-caret-down"></i>';
+  missionlink.href = 'missions.html';
+}
 
 const missions = [
   { name: 'Clean Water and Sanitisation', href: '/cws' },
