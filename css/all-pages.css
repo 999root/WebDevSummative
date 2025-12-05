@@ -71,7 +71,7 @@ footer {
 /* Links / text */
 .footer_list a,
 .footer_list p {
-    color: #b5b5b5;
+    color: #fff;
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.2s ease;
@@ -79,7 +79,7 @@ footer {
 
 /* Hover states */
 .footer_list a:hover {
-    color: #ffffff;
+    color: #b5b5b5;
 }
 
 /* Social icons */

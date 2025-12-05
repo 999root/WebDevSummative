@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const missionList = document.getElementById('mission-list');
 
-  fetch('data/missions.json')
+  fetch('scripts/json/missions.json')
     .then(response => response.json())
     .then(missions => {
       missions.forEach(mission => {

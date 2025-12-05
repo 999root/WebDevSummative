@@ -30,7 +30,7 @@
         
     },
     {
-        "title": "Social media links:",
+        "title": "Social Media",
         "class": "social_media_links",
         "links": [
             {"context": "Instagram", "href": "https://www.instagram.com/theglobalgoals/?hl=bg", "icon_class": "fa-brands fa-instagram fa-2x"},

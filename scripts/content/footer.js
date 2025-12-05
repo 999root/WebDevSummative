@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         let list_link = document.createElement("a");
                         list_link.setAttribute("href", line.href);
 
-                        if (i.title == "Social media links:") {
+                        if (i.title == "Social Media") {
                             let list_icon = document.createElement("i");
                             list_icon.setAttribute("class", line.icon_class);
                             list_link.appendChild(list_icon);
