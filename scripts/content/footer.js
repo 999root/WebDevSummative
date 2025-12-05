@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let list_item = document.createElement("li");
                 list.appendChild(list_item);
 
-                let list_title = document.createElement("h3");
+                let list_title = document.createElement("h2");
                 list_title.textContent = i.title;
                 list_item.appendChild(list_title);
 

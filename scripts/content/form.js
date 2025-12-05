@@ -2,6 +2,9 @@ const formList = 'scripts/json/signup.json';
 const imageList = 'scripts/json/signup_images.json';
 const form = document.querySelector("form");
 const section = document.querySelector("#form");
+const form_header = document.querySelector("#form_title");
+const form_message = document.querySelector("#form_message");
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(a => {
 
-            const header = document.querySelector("#form_title");
-            header.textContent = "Sign up to recieve the latest news!";
+            form_header.textContent = "Sign up to recieve the latest news!";
 
             
             for (i of a) {
@@ -26,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     label.setAttribute("for", i.for);
                     form.appendChild(label);
                     form.appendChild(document.createElement("br"));
-
 
                     let input = document.createElement("input");
                     input.setAttribute("type", i.type);
@@ -82,7 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         //test
                         console.log(info);
                         console.log(info.first_name, info.last_name, info.email, info.comments);
+                         form.style.display = "none";
+                         form_header.textContent = "Thank you!"
+                         form_message.innerHTML = `We appreciate you singing for our form ${info.first_name}.<br><br>If you desire to opt-out, email us on dconews@un.org.`;
+
                     });
+
+                
+                    
 
             })
         })

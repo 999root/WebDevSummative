@@ -109,6 +109,7 @@ footer {
 
     .footer_list {
         width: 100%;
+        border-bottom: solid;
     }
 
     .footer_list li[class*="social"] {

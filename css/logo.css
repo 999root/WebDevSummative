@@ -1,8 +1,36 @@
 /* Logo */
-@keyframes spin{
-    100%{transform: rotate(360deg);};
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+
+    ;
 }
-#logo{
+
+#logo {
     width: 100px;
     animation: spin 20s infinite;
+}
+
+/*size buttons*/
+#size_buttons {
+    position: fixed;
+    padding: 0% 0% 0% 89vw;
+
+}
+
+#size_buttons>button {
+
+    padding: 10px;
+    margin: 0 5;
+    background-color: #458588;
+    color: white;
+    border-color: #233f40;
+    border-radius: 30%;
+}
+
+@media only screen and (max-width: 786px) {
+    #size_buttons {
+        display: none;
+    }
 }

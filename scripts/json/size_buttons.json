@@ -1,0 +1,8 @@
+[{
+    "class": "fa-regular fa-plus",
+    "id": "increase_button"
+},
+{
+    "class": "fa-solid fa-minus",
+    "id": "decrease_button"
+}]
