@@ -6,6 +6,7 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
 //
 // Footer
 //
+/*
 copyrightBtn = document.querySelector('#copyright-button button');
 contactBtn = document.querySelector('#contact-button button');
 privacyBtn = document.querySelector('#privacy-policy-button button');
@@ -25,3 +26,4 @@ socialsTitle.textContent = "Socials:";
 instagramLink.setAttribute('class', 'fa-brands fa-instagram');
 twitterLink.setAttribute('class', 'fa-brands fa-x-twitter')
 facebookLink.setAttribute('class', 'fa-brands fa-facebook')
+*/

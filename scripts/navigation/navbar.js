@@ -25,21 +25,18 @@ const contactlink = contactpage.querySelector('a');
 contactlink.textContent = contact.name;
 contactlink.href = contact.href;
 
+
 // Missions Link
 const missionspages = document.getElementById('missions-nav-links');
-const missionlink = missionspages.querySelector('a');
-missionlink.innerHTML = 'Missions <i class="fa-solid fa-caret-down"></i>';
-missionlink.href = '#';
+if (missionspages) {
+  const missionlink = missionspages.querySelector('a');
+  missionlink.innerHTML = 'Missions';
+  missionlink.href = 'missions.html';
+  
+  
+  const dropdownMenu = missionspages.querySelector('ul');
+  if (dropdownMenu) {
+    dropdownMenu.remove();
+  }
+};
 
-const missions = [
-  { name: 'Clean Water and Sanitisation', href: '/cws' },
-  { name: 'Life Below Water', href: '/lbw' },
-  { name: 'Responsible, Consumption and Production', href: '/rcp' }
-];
-
-const childLinks = document.querySelectorAll('#missions-nav-links ul li a');
-
-childLinks.forEach((link, index) => {
-  link.textContent = missions[index].name;
-  link.href = missions[index].href;
-});

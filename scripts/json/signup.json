@@ -1,0 +1,37 @@
+[
+        {
+                "label": "First Name",
+                "for": "first_name",
+                "type": "text",
+                "id": "first_name",
+                "name": "first_name"
+        },
+        {
+                "label": "Last Name",
+                "for": "last_name",
+                "type": "text",
+                "id": "last_name",
+                "name": "last_name"
+        },
+        {
+                "label": "Email",
+                "for": "email",
+                "type": "email",
+                "id": "email",
+                "name": "email"
+        },
+        {
+                "label": "Comments",
+                "for": "comments",
+                "type": "text",
+                "id": "comments",
+                "name": "comments"
+        },
+        {
+                "label": "Submit",
+                "for": "",
+                "type": "submit",
+                "id": "Submit",
+                "name": "submit"
+        }
+]

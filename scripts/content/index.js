@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ================================
   //
   const heroTitle = document.querySelector('#hero-title h1');
-  heroTitle.textContent = 'Championing Growth';
+  if (heroTitle)
+  {
+    heroTitle.textContent = 'Championing Growth';
+  }
 
 
   //
@@ -13,19 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // HOMEPAGE POWERPOINT SLIDESHOW
   // ================================
   //
-  const powerpointImg = document.querySelector('#powerpoint figure img');
-
-  const images = [
-    'assets/landscape1.jpg',
-    'assets/landscape2.jpg',
-    'assets/landscape3.jpg'
-  ];
-
-  let currentImageIndex = 0;
-  const slideInterval = 4000; // in milliseconds
-
-  // Add CSS transitions for sliding effect
-  powerpointImg.style.transition = 'transform 0.8s ease-in-out, opacity 0.8s ease-in-out';
 
   // Function to update image source
   function updateImage() {
@@ -54,9 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 800);
   }
 
-  // Initialize slideshow
-  powerpointImg.src = images[currentImageIndex];
-  setInterval(slideToNextImage, slideInterval);
+  const powerpointImg = document.querySelector('#powerpoint figure img');
+
+  if (powerpointImg)
+  {
+    const images = [
+      'assets/landscape1.jpg',
+      'assets/landscape2.jpg',
+      'assets/landscape3.jpg'
+    ];
+
+    let currentImageIndex = 0;
+    const slideInterval = 4000; // in milliseconds
+
+    // Add CSS transitions for sliding effect
+    powerpointImg.style.transition = 'transform 0.8s ease-in-out, opacity 0.8s ease-in-out';
+
+    // Initialize slideshow
+    powerpointImg.src = images[currentImageIndex];
+    setInterval(slideToNextImage, slideInterval);
+  }
 
 
   //
@@ -70,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       boxEl: document.getElementById('goal-box-1'),
       linkEl: document.querySelector('#goal-link1'),
       title: 'Life Below Water',
-      href: '/lbw',
+      href: 'missions.html',
       color: '#bf616a'
     },
     {
@@ -91,11 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  goals.forEach(goal => {
-    goal.titleEl.textContent = goal.title;
-    goal.boxEl.style.backgroundColor = goal.color;
-    goal.linkEl.href = goal.href;
-  });
+  if (document.getElementById('goal-box-title-1')) {
+    goals.forEach(goal => {
+      goal.titleEl.textContent = goal.title;
+      goal.boxEl.style.backgroundColor = goal.color;
+      goal.linkEl.href = goal.href;
+    });
+  }
 
 
   //
@@ -104,7 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ================================
   //
   const viewGoalsButton = document.querySelector('#button-container a');
-  viewGoalsButton.setAttribute('href', 'goals.html');
+  if (viewGoalsButton) {
+    viewGoalsButton.setAttribute('href', 'goals.html');
+  }
 
 
   //
@@ -121,9 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoImageRow2 = document.querySelector('.info-row.row-2 img');
   const infoImageRow3 = document.querySelector('.info-row.row-3 img');
 
-  infoImageRow1.src = 'assets/landscape1.jpg';
-  infoImageRow2.src = 'assets/landscape2.jpg';
-  infoImageRow3.src = 'assets/landscape3.jpg'
+  if (infoImageRow1 && infoImageRow2 && infoImageRow3) {
+    infoImageRow1.src = 'assets/landscape1.jpg';
+    infoImageRow2.src = 'assets/landscape2.jpg';
+    infoImageRow3.src = 'assets/landscape3.jpg';
+  }
 
   // Content
   const infoTitleRow1 = document.querySelector('.info-row.row-1 div h2');
@@ -135,13 +148,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoTitleRow3 = document.querySelector('.info-row.row-3 div h2');
   const infoParaRow3 = document.querySelector('.info-row.row-3 div p');
 
-  infoTitle.textContent = 'Our Sustainability Efforts';
-  infoTitleRow1.textContent = 'Clean Water Solutions';
-  infoParaRow1.textContent = 'We’re investing in innovative water purification systems to ensure communities have access to clean, safe drinking water worldwide.';
+  if (infoTitle)
+  {
+    infoTitle.textContent = 'Our Sustainability Efforts';
+    infoTitleRow1.textContent = 'Clean Water Solutions';
+    infoParaRow1.textContent = 'We’re investing in innovative water purification systems to ensure communities have access to clean, safe drinking water worldwide.';
 
-  infoTitleRow2.textContent = 'Preserving Marine Life';
-  infoParaRow2.textContent = 'Our initiatives aim to protect and restore marine ecosystems through sustainable practices, awareness, and community collaboration.';
+    infoTitleRow2.textContent = 'Preserving Marine Life';
+    infoParaRow2.textContent = 'Our initiatives aim to protect and restore marine ecosystems through sustainable practices, awareness, and community collaboration.';
 
-  infoTitleRow3.textContent = 'Preserving Marine Life';
-  infoParaRow3.textContent = 'Our initiatives aim to protect and restore marine ecosystems through sustainable practices, awareness, and community collaboration.';
+    infoTitleRow3.textContent = 'Preserving Marine Life';
+    infoParaRow3.textContent = 'Our initiatives aim to protect and restore marine ecosystems through sustainable practices, awareness, and community collaboration.';
+  }
 });
