@@ -68,7 +68,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       if (titleEl) titleEl.textContent = goal.title;
       if (boxEl) boxEl.style.backgroundColor = goal.color;
-      if (linkEl) linkEl.href = goal.href;
+      //if (linkEl) linkEl.href = goal.href;
+
+
+      // when creating the goal-link elements (index.js)
+      if (linkEl) {
+        // ensure a relative path that matches your site. Example:
+        linkEl.href = `/missions.html#mission-${index + 1}`;
+
+        // optional: store the target in sessionStorage on click so missions page can use it.
+        linkEl.addEventListener('click', (e) => {
+          // store the fragment without the '#'
+          const target = `mission-${index + 1}`;
+          sessionStorage.setItem('scrollToMission', target);
+          // allow normal navigation to happen (don't preventDefault)
+        });
+      }
     });
 
 
