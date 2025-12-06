@@ -1,5 +1,58 @@
-[
+{
+  "hero": {
+    "title": "Championing Growth"
+  },
+
+  "slideshow": {
+    "images": [
+      "assets/img2.jpg",
+      "assets/goal12.png",
+      "assets/life-below-water.jpg"
+    ],
+    "interval": 4000
+  },
+
+  "goals": [
     {
-        
+      "title": "Life Below Water",
+      "href": "/missions.html#mission-1",
+      "color": "#bf616a"
+    },
+    {
+      "title": "Clean Water and Sanitisation",
+      "href": "/missions.html#mission-2",
+      "color": "#d08770"
+    },
+    {
+      "title": "Responsible Consumption and Production",
+      "href": "/missions.html#mission-3",
+      "color": "#a3be8c"
     }
-]
+  ],
+
+  "viewAll": {
+    "text": "View All",
+    "href": "goals.html"
+  },
+
+  "infoSection": {
+    "title": "Our Sustainability Efforts",
+    "rows": [
+      {
+        "image": "assets/clean-water.jpg",
+        "title": "Clean Water Solutions",
+        "description": "We’re investing in innovative water purification systems to ensure communities have access to clean, safe drinking water worldwide."
+      },
+      {
+        "image": "assets/life-below-water.jpg",
+        "title": "Preserving Marine Life",
+        "description": "Our initiatives aim to protect and restore marine ecosystems through sustainable practices, awareness, and community collaboration."
+      },
+      {
+        "image": "assets/responsible-consumption-production.jpg",
+        "title": "Responsible Consumption",
+        "description": "We promote sustainable production habits that reduce waste, conserve resources and protect the environment."
+      }
+    ]
+  }
+}
