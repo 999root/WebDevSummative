@@ -33,12 +33,12 @@ let transport = nodemailer.createTransport({
     })*/
 
 
-    //await console.log(fs.readFile('/no/public/context.json', 'utf8'));*/
+//await console.log(fs.readFile('/no/public/context.json', 'utf8'));*/
 
 
 
-    
-////trying to save the data in a json, still havent finished it :3////
+
+////trying to save the data in a json, it works but doesnt have hashing or other security measures////
 app.post('/login', async (req, res) => {
     let first_name = req.body.first_name;
     let last_name = req.body.last_name;
@@ -50,7 +50,13 @@ app.post('/login', async (req, res) => {
     fs.readFile("storage.json", async function (err, result) {
         var astring = JSON.parse(result);
         console.log(astring);
-        astring.push("first_name\" : \"" + first_name + "\",\n" + "last_name\" : \"" + last_name + "\",\n" + "email\" : \"" + email + "\",\n" + "comments : \"" + comments + "\",\n");
+        var new_info = {
+            "first_name": first_name,
+            "last_name": last_name,
+            "email": email,
+            "comments": comments
+        }
+        astring.push(new_info);
         console.log(astring);
         fs.writeFileSync("storage.json", JSON.stringify(astring));
     }

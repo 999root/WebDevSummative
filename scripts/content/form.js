@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             form_header.textContent = "Sign up to recieve the latest news!";
 
-            
+
             for (i of a) {
                 if (i.type === "submit") {
                     let input = document.createElement("input");
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     input.setAttribute("type", i.type);
                     input.setAttribute("id", i.id);
                     input.setAttribute("name", i.name);
-                    
+
                     if (i.id != "comments") {
                         input.setAttribute("required", "");
                     }
@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
             document.addEventListener("submit", (event) => {
 
                 event.preventDefault();
-                //test
-                console.log(first_name.value);
+            
 
+                ///posts the form information
                 const submitBody = {
                     first_name: first_name.value,
                     last_name: last_name.value,
@@ -65,8 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     comments: comments.value
                 };
 
-                //test
-                console.log(submitBody);
+
 
                 const requestHeader = {
                     "Content-Type": "application/json"
@@ -77,20 +76,27 @@ document.addEventListener("DOMContentLoaded", () => {
                     method: "POST",
                     headers: requestHeader,
                     body: JSON.stringify(submitBody)
-                })
+                });
+
+                ///fetches the stored information
+                fetch("storage.json")
                     .then(response => response.json())
                     .then(info => {
                         //test
-                        console.log(info);
-                        console.log(info.first_name, info.last_name, info.email, info.comments);
-                         form.style.display = "none";
-                         form_header.textContent = "Thank you!"
-                         form_message.innerHTML = `We appreciate you singing for our form ${info.first_name}.<br><br>If you desire to opt-out, email us on dconews@un.org.`;
+                        for (i of info) {
+                            if (i.first_name === first_name.value) {
+                                console.log(i.first_name, i.last_name, i.email, i.comments);
+                                form.style.display = "none";
+                                form_header.textContent = "Thank you!"
+                                form_message.innerHTML = `We appreciate you singing for our form, ${i.first_name}.<br><br>If you desire to opt-out, email us on dconews@un.org.`;
 
+                            }
+                        }
+                       
                     });
 
-                
-                    
+
+
 
             })
         })
