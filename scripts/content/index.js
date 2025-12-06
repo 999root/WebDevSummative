@@ -17,6 +17,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // ================================
   //
 
+  const powerpointImg = document.querySelector('#powerpoint figure img');
+
+  const images = [
+      'assets/img2.jpg',
+      'assets/goal12.png',
+      'assets/life-below-water.jpg'
+    ];
+
+    let currentImageIndex = 0;
+    const slideInterval = 4000; // in milliseconds
+
+    // Add CSS transitions for sliding effect
+    powerpointImg.style.transition = 'transform 0.8s ease-in-out, opacity 0.8s ease-in-out';
+
+    // Initialize slideshow
+    powerpointImg.src = images[currentImageIndex];
+    setInterval(slideToNextImage, slideInterval);
+
   // Function to update image source
   function updateImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
@@ -44,27 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 800);
   }
 
-  const powerpointImg = document.querySelector('#powerpoint figure img');
-
-  if (powerpointImg)
-  {
-    const images = [
-      'assets/landscape1.jpg',
-      'assets/landscape2.jpg',
-      'assets/landscape3.jpg'
-    ];
-
-    let currentImageIndex = 0;
-    const slideInterval = 4000; // in milliseconds
-
-    // Add CSS transitions for sliding effect
-    powerpointImg.style.transition = 'transform 0.8s ease-in-out, opacity 0.8s ease-in-out';
-
-    // Initialize slideshow
-    powerpointImg.src = images[currentImageIndex];
-    setInterval(slideToNextImage, slideInterval);
-  }
-
 
   //
   // ================================
@@ -77,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       boxEl: document.getElementById('goal-box-1'),
       linkEl: document.querySelector('#goal-link1'),
       title: 'Life Below Water',
-      href: '/lbw',
+      href: '/missions.html#mission-1',
       color: '#bf616a'
     },
     {
@@ -85,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       boxEl: document.getElementById('goal-box-2'),
       linkEl: document.querySelector('#goal-link2'),
       title: 'Clean Water and Sanitisation',
-      href: '/cws',
+      href: '/missions.html#mission-2',
       color: '#d08770'
     },
     {
@@ -93,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       boxEl: document.getElementById('goal-box-3'),
       linkEl: document.querySelector('#goal-link3'),
       title: 'Responsible Consumption and Production',
-      href: '/rcp',
+      href: '/missions.html#mission-3',
       color: '#a3be8c'
     }
   ];
@@ -112,9 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // VIEW ALL BUTTON
   // ================================
   //
-  const viewGoalsButton = document.querySelector('#button-container a');
+  const viewGoalsButtonLink = document.querySelector('#button-container a');
+  if (viewGoalsButtonLink) {
+    viewGoalsButtonLink.setAttribute('href', 'goals.html');
+  }
+
+  const viewGoalsButton = document.querySelector('#button-container a button');
   if (viewGoalsButton) {
-    viewGoalsButton.setAttribute('href', 'goals.html');
+    viewGoalsButton.textContent = 'View All';
   }
 
 
@@ -133,9 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoImageRow3 = document.querySelector('.info-row.row-3 img');
 
   if (infoImageRow1 && infoImageRow2 && infoImageRow3) {
-    infoImageRow1.src = 'assets/landscape1.jpg';
-    infoImageRow2.src = 'assets/landscape2.jpg';
-    infoImageRow3.src = 'assets/landscape3.jpg';
+    infoImageRow1.src = 'assets/clean-water.jpg';
+    infoImageRow2.src = 'assets/life-below-water.jpg';
+    infoImageRow3.src = 'assets/responsible-consumption-production.jpg';
   }
 
   // Content

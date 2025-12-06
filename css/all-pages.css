@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
   margin: 5px;
   font-family: "Montserrat", sans-serif;
@@ -16,10 +20,14 @@ header {
   display: flex;
   font-family: "Montserrat", sans-serif;
   color: #000;
-  height: 100px;
+  height: 120px;
   align-items: center;
   line-height: 200%;
   padding: 16px;
+}
+
+header h1 {
+    text-align: center;
 }
 
 /* Footer */

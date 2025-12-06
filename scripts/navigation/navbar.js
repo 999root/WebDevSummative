@@ -34,9 +34,9 @@ if (missionspages) {
 }
 
 const missions = [
-  { name: 'Clean Water and Sanitisation', href: '/cws' },
-  { name: 'Life Below Water', href: '/lbw' },
-  { name: 'Responsible, Consumption and Production', href: '/rcp' }
+  { name: 'Clean Water and Sanitisation', href: '/missions.html#mission-1' },
+  { name: 'Life Below Water', href: '/missions.html#mission-2' },
+  { name: 'Responsible, Consumption and Production', href: '/missions.html#mission-3' }
 ];
 
 const childLinks = document.querySelectorAll('#missions-nav-links ul li a');
