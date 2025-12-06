@@ -1,47 +1,69 @@
+// navbar.js
+fetch('/scripts/json/navbar.json')
+  .then(res => {
+    if (!res.ok) throw new Error('Failed to load navbar.json: ' + res.status);
+    return res.json();
+  })
+  .then(data => {
+    // Home
+    const homepage = document.getElementById('home-page-nav-link');
+    if (homepage) {
+      const hplink = homepage.querySelector('a') || homepage.appendChild(document.createElement('a'));
+      hplink.textContent = data.home.name;
+      hplink.href = data.home.href;
+    }
 
-// Nav Links
+    // About
+    const aboutpage = document.getElementById('about-page-nav-link');
+    if (aboutpage) {
+      const aplink = aboutpage.querySelector('a') || aboutpage.appendChild(document.createElement('a'));
+      aplink.textContent = data.about.name;
+      aplink.href = data.about.href;
+    }
 
-// Home Page Link
-const home = { name: "Home", href: "/"}
+    // Contact
+    const contactpage = document.getElementById('contact-page-nav-link');
+    if (contactpage) {
+      const contactlink = contactpage.querySelector('a') || contactpage.appendChild(document.createElement('a'));
+      contactlink.textContent = data.contact.name;
+      contactlink.href = data.contact.href;
+    }
 
-const homepage = document.getElementById('home-page-nav-link');
-const hplink = homepage.querySelector('a');
-hplink.textContent = home.name;
-hplink.href = home.href;
+    // Missions (parent + dynamically generated children)
+    const missionsContainer = document.getElementById('missions-nav-links');
+    if (missionsContainer) {
+      // Ensure there is an anchor for the parent
+      let parentA = missionsContainer.querySelector('a');
+      if (!parentA) {
+        parentA = document.createElement('a');
+        missionsContainer.appendChild(parentA);
+      }
 
-// About Page Link
-const about = { name: "About", href: "/about" }
+      // Insert Font Awesome caret in innerHTML to show the icon
+      // (Font Awesome must be included in your HTML — see note below)
+      parentA.innerHTML = `${data.missionsParent.name} <i class="fa-solid fa-caret-down" aria-hidden="true"></i>`;
+      parentA.href = data.missionsParent.href;
 
-const aboutpage = document.getElementById('about-page-nav-link');
-const aplink = aboutpage.querySelector('a');
-aplink.textContent = about.name;
-aplink.href = about.href;
+      // Ensure there is a UL to hold children; create if missing
+      let ul = missionsContainer.querySelector('ul');
+      if (!ul) {
+        ul = document.createElement('ul');
+        missionsContainer.appendChild(ul);
+      }
 
-// Contact Page Link
-const contact = { name: "Contact", href: "/signup.html"}
-
-const contactpage = document.getElementById('contact-page-nav-link');
-const contactlink = contactpage.querySelector('a');
-contactlink.textContent = contact.name;
-contactlink.href = contact.href;
-
-// Missions Link
-const missionspages = document.getElementById('missions-nav-links');
-if (missionspages) {
-  const missionlink = missionspages.querySelector('a');
-  missionlink.innerHTML = 'Missions <i class="fa-solid fa-caret-down"></i>';
-  missionlink.href = 'missions.html';
-}
-
-const missions = [
-  { name: 'Clean Water and Sanitisation', href: '/missions.html#mission-1' },
-  { name: 'Life Below Water', href: '/missions.html#mission-2' },
-  { name: 'Responsible, Consumption and Production', href: '/missions.html#mission-3' }
-];
-
-const childLinks = document.querySelectorAll('#missions-nav-links ul li a');
-
-childLinks.forEach((link, index) => {
-  link.textContent = missions[index].name;
-  link.href = missions[index].href;
-});
+      // Clear any existing children and build from JSON (this avoids missing links)
+      ul.innerHTML = '';
+      data.missions.forEach(m => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.textContent = m.name;
+        a.href = m.href;
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+    }
+  })
+  .catch(err => {
+    // keep console error but don't break the rest of the page
+    console.error(err);
+  });
