@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.addEventListener("submit", (event) => {
 
                 event.preventDefault();
-            
+
 
                 ///posts the form information
                 const submitBody = {
@@ -76,25 +76,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     method: "POST",
                     headers: requestHeader,
                     body: JSON.stringify(submitBody)
+                }).then(() => {
+                    console.log(first_name.value, last_name.value, email.value, comments.value);
+                    form.style.display = "none";
+                    form_header.textContent = "Thank you!"
+                    form_message.innerHTML = `We appreciate you singing for our form, ${first_name.value}.<br><br>If you desire to opt-out, email us on dconews@un.org.`;
+
                 });
-
-                ///fetches the stored information
-                fetch("storage.json")
-                    .then(response => response.json())
-                    .then(info => {
-                        //test
-                        for (i of info) {
-                            if (i.first_name === first_name.value) {
-                                console.log(i.first_name, i.last_name, i.email, i.comments);
-                                form.style.display = "none";
-                                form_header.textContent = "Thank you!"
-                                form_message.innerHTML = `We appreciate you singing for our form, ${i.first_name}.<br><br>If you desire to opt-out, email us on dconews@un.org.`;
-
-                            }
-                        }
-                       
-                    });
-
 
 
 
@@ -117,13 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
 })
-
-
-
-
-
-
-
 
 
 
