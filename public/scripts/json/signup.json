@@ -28,6 +28,13 @@
                 "name": "comments"
         },
         {
+                "label": "Passkey",
+                "for": "Passkey",
+                "type": "text",
+                "id": "passkey",
+                "name": "passkey"
+        },
+        {
                 "label": "Submit",
                 "for": "",
                 "type": "submit",

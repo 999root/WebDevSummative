@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let last_name = document.querySelector("#last_name");
             let email = document.querySelector("#email");
             let comments = document.querySelector("#comments");
+            let passkey = document.querySelector("#passkey");
 
             document.addEventListener("submit", (event) => {
 
@@ -62,7 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     first_name: first_name.value,
                     last_name: last_name.value,
                     email: email.value,
-                    comments: comments.value
+                    comments: comments.value,
+                    passkey: passkey.value
                 };
 
 
@@ -71,18 +73,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Content-Type": "application/json"
                 };
 
+                try {
+                    fetch('/login', {
+                        method: "POST",
+                        headers: requestHeader,
+                        body: JSON.stringify(submitBody)
+                    }).then(() => {
+                        form.style.display = "none";
+                        form_header.textContent = "Thank you!"
+                        form_message.innerHTML = `We appreciate you singing for our form, ${first_name.value}.<br><br>If you desire to opt-out, email us on dconews@un.org (passkey is required in the email).`;
 
-                fetch('/login', {
-                    method: "POST",
-                    headers: requestHeader,
-                    body: JSON.stringify(submitBody)
-                }).then(() => {
-                    console.log(first_name.value, last_name.value, email.value, comments.value);
+                    });
+                } catch (err) {
                     form.style.display = "none";
-                    form_header.textContent = "Thank you!"
-                    form_message.innerHTML = `We appreciate you singing for our form, ${first_name.value}.<br><br>If you desire to opt-out, email us on dconews@un.org.`;
-
-                });
+                    form_header.textContent = "Sorry"
+                    form_message.innerHTML = `Your form could not be recieved, please try again later`;
+                    throw err;
+                }
 
 
 
