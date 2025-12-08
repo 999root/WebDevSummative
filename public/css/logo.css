@@ -1,33 +1,42 @@
+/* Header layout */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Title */
+#title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #2e3440;
+    margin: 0;
+    line-height: 1.2;
+}
+
 /* Logo */
 @keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
-
-    ;
+    100% { transform: rotate(360deg); }
 }
 
 #logo {
     width: 100px;
-    animation: spin 20s infinite;
+    animation: spin 20s infinite linear;
 }
 
-/*size buttons*/
-#size_buttons {
-    position: fixed;
-    padding: 0% 0% 0% 89vw;
-
-}
-
-#size_buttons>button {
+/* Size buttons */
+#size_buttons button {
     padding: 10px;
-    margin: 0 5;
+    margin: 0 5px;
     background-color: #458588;
     color: white;
-    border-color: #233f40;
+    border: 2px solid #233f40;
     border-radius: 30%;
 }
 
+/* Hide buttons on mobile */
 @media only screen and (max-width: 786px) {
     #size_buttons {
         display: none;

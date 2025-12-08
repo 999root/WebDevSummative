@@ -1,0 +1,29 @@
+[
+    {
+        "Name": "Name: Nick",
+        "Email": "Email: N.Kuye@uea.ac.uk",
+        "Bio": "Bio: I love the environment",
+        "Role": "Role: Making the about page, wireframing"
+    },
+
+    {
+        "Name": "Name: Martin",
+        "Email": "Email: M.Neyanov@uea.ac.uk",
+        "Bio": "Bio: Live Love Laugh",
+        "Role": "Role: sign up page, Sitemap, moodboard & Wireframing"
+    },
+
+    {
+        "Name": "Name: Benn",
+        "Email": "Email: B.Pope@uea.ac.uk",
+        "Bio": "Bio: North London is Red",
+        "Role":"Role: Index/Home page, Blog page & Wireframing"
+    },
+    
+    {
+        "Name": "Name: Aurimas",
+        "Email": "Email: A.Salina@uea.ac.uk",
+        "Bio": "Bio: I am very passionate when it comes to the wellbeing of our planet",
+        "Role": "Role: Design of presentation, Article Page & Wireframing"
+    }
+]

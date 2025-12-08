@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 h1 {
   font-size: clamp(2rem, 4vw, 3rem);
@@ -5,6 +6,7 @@ h1 {
   color: #2e3440;
   margin-bottom: 1rem;
   line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
 }
 
 h2 {

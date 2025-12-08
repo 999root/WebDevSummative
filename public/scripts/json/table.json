@@ -1,0 +1,28 @@
+[
+    {
+        "value1": "Page",
+        "value2": "Tasks",
+        "value3": "Name"
+    },
+    {
+        "value1": "Home",
+        "value2": "HTML, CSS, fetch call, JSON",
+        "value3": "Benn Pope"
+    },
+    {
+        "value1": "Missions",
+        "value2": "HTML, CSS, fetch call, JSON",
+        "value3": "Aurimas Salina"
+    },
+    {
+        "value1": "Sign-up",
+        "value2": "HTML, CSS, fetch call, JSON",
+        "value3": "Martin Nevyanov"
+    },
+    {
+        "value1": "About",
+        "value2": "HTML, CSS, fetch call, JSON",
+        "value3": "Nicolas Kuye"
+    }
+    
+]

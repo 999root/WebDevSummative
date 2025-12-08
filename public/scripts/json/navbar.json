@@ -1,6 +1,6 @@
 {
   "home": { "name": "Home", "href": "/" },
-  "about": { "name": "About", "href": "/about" },
+  "about": { "name": "About", "href": "/about.html" },
   "contact": { "name": "Contact", "href": "/signup.html" },
   "missionsParent": { "name": "Missions", "href": "/missions.html" },
   "missions": [

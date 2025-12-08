@@ -1,0 +1,88 @@
+#aboutsection{
+    border:#bed7d6, solid;
+     border-radius: 20px;
+     background:#bed7d6;
+
+}
+
+#abouttitle{
+    text-align:center;
+    color:black;
+    margin-top: 40px;
+}
+section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow:hidden;
+}
+
+.aboutclass {
+    float: left;
+    width: 40%;
+    height: 230px;
+    background-color: #458588;
+    padding-top: 24px;
+    padding-bottom: 10px;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin-top: 2%;
+    margin-right: -100px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    border-radius: 15px;
+    box-sizing: border-box;
+     color:white;
+
+}
+.aboutclass > h2{
+     font-size:20;
+}
+
+#team_table{
+    border:2px solid;
+    width: 50%;
+    height: 50%;
+    margin: 0px auto;
+background-color: #458588;
+color:white;
+}
+
+#team_table th{
+    border:3px solid;
+}
+
+@media (max-width: 768px) {
+.aboutclass {
+    float: left;
+    width: 60%;
+    height: 450px;
+    background-color: #458588;
+    padding-top: 24px;
+    padding-bottom: 10px;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin-top: 2%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    border-radius: 15px;
+    box-sizing: border-box;
+     color:white;
+
+}
+#team_table{
+    border:2px solid;
+    width: 75%;
+    height: 75%;
+    margin: 0px auto;
+background-color: #458588;
+color:white;
+}
+
+#team_table th{
+    border:3px solid;
+}
+
+}
