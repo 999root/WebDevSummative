@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const crypto = require("crypto");
 const { body } = require("express-validator");
 const app = express();
-const port = 3030;
+const port = 3000;
 
 app.use(express.static("public"));//
 app.use(express.json());
