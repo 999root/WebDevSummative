@@ -29,7 +29,7 @@
         },
         {
                 "label": "Passkey",
-                "for": "Passkey",
+                "for": "passkey",
                 "type": "text",
                 "id": "passkey",
                 "name": "passkey"

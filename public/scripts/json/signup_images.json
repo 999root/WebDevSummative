@@ -1,11 +1,14 @@
 [
     {
-        "src": "assets/img1.jpg"
+        "src": "assets/img1.jpg",
+        "alt": "A sand field with a tractor"
     },
     {
-        "src": "assets/img2.jpg"
+        "src": "assets/img2.jpg",
+        "alt": "a man pouring hot sugar canes on a mold  in the outside"
     },
     {
-        "src": "assets/img3.jpg"
+        "src": "assets/img3.jpg",
+        "alt": "pebble beach"
     }
 ]
