@@ -1,0 +1,26 @@
+{
+  "name": "webdev",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/999root/WebDevSummative#readme",
+  "bugs": {
+    "url": "https://github.com/999root/WebDevSummative/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/999root/WebDevSummative.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-validator": "^7.3.1",
+    "nodemailer": "^7.0.11"
+  }
+}
