@@ -31,20 +31,44 @@ document.addEventListener('DOMContentLoaded', () => {
         h2.textContent = mission.title;
         textWrapper.appendChild(h2);
 
-        mission.paragraphs.forEach(text => {
-          const p = document.createElement('p');
-          p.textContent = text;
-          textWrapper.appendChild(p);
-        });
+        // ======================================
+        // DYNAMIC TEXT 
+        // ======================================
+        const dynamicText = document.createElement('p');
+        dynamicText.textContent = mission.paragraphs.issue;
+        dynamicText.className = "mission-dynamic-text";
+        textWrapper.appendChild(dynamicText);
 
-        // Buttons
+        // ======================================
+        // BUTTONS
+        // ======================================
         const buttonContainer = document.createElement("div");
         buttonContainer.className = "mission-buttons";
 
-        ["The issue", "What to Change", "How"].forEach(name => {
+        const buttonConfig = [
+          { name: "The issue", key: "issue" },
+          { name: "What to Change", key: "whatdo" }
+        ];
+
+        buttonConfig.forEach((btnInfo, index) => {
           const btn = document.createElement("button");
-          btn.textContent = name;
+          btn.textContent = btnInfo.name;
           btn.className = "selection";
+
+          // First button active
+          if (index === 0) btn.classList.add("active");
+
+          btn.addEventListener("click", () => {
+            // Remove active from all
+            buttonContainer.querySelectorAll(".selection")
+              .forEach(b => b.classList.remove("active"));
+
+            btn.classList.add("active");
+
+            // Change text dynamically
+            dynamicText.textContent = mission.paragraphs[btnInfo.key];
+          });
+
           buttonContainer.appendChild(btn);
         });
 

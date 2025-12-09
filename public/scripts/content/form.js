@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (line of img) {
                 let newImage = document.createElement("img");
                 newImage.setAttribute("src", line.src);
+                newImage.setAttribute("alt", line.alt);
                 imgSection.appendChild(newImage);
             }
         })

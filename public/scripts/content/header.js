@@ -5,6 +5,7 @@ title.textContent = 'UN Sustainable Development Goals';
 
 logo = document.querySelector('#logo');
 logo.setAttribute("src", "/assets/logo.png");
+logo.setAttribute("alt", "Logo of UN's development goals");
 
 //Text resize buttons - fetch
 button_section = document.getElementById("size_buttons");
@@ -15,6 +16,8 @@ fetch("scripts/json/size_buttons.json")
             button = document.createElement("button");
             button.setAttribute("class", i.class);
             button.setAttribute("id", i.id);
+            button.setAttribute("type", "button");
+            button.textContent = "";
             button_section.appendChild(button);
         }
     })
@@ -58,14 +61,14 @@ fetch("scripts/json/size_buttons.json")
 
         function sizeChange(text, size) {
             for (i of text) {
-                i.style.fontSize = size;
+                i.style.fontSize = size + "px";
             }
         }
 
 
         //event listeners
         document.getElementById("increase_button").addEventListener("click", () => {
-
+            console.log("increase");
             header1_size += 5;
             capSize_header1()
             sizeChange(headers1, header1_size);
