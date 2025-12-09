@@ -4,9 +4,9 @@
         "class": "explore",
         "links": [
             {"context": "Home page", "href": "/index.html"},
-            {"context": "Goals", "href": "/"},
+            {"context": "Goals", "href": "/missions.html"},
             {"context": "Sign-up", "href": "/signup.html"},
-            {"context": "Meet the team", "href": "/"}
+            {"context": "Meet the team", "href": "/about.html"}
         ]
     },
     {
