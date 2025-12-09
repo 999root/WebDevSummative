@@ -1,6 +1,4 @@
-/* ================================
-   GLOBAL STYLES
-================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -22,9 +20,6 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 0.5px;
 }
 
-/* ================================
-   HERO SECTION
-================================ */
 #hero-title {
   display: flex;
   align-items: center;
@@ -41,9 +36,6 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 1rem;
 }
 
-/* ================================
-   POWERPOINT SLIDESHOW
-================================ */
 #powerpoint {
   display: flex;
   align-items: center;
@@ -73,9 +65,6 @@ h1, h2, h3, h4, h5 {
   transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
-/* ================================
-   GOALS SECTION
-================================ */
 #goal-list {
   display: flex;
   flex-wrap: wrap;
@@ -122,9 +111,6 @@ h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
-/* ================================
-   VIEW ALL BUTTON
-================================ */
 #button-container {
   display: flex;
   justify-content: center;
@@ -151,9 +137,6 @@ h1, h2, h3, h4, h5 {
   transform: translateY(-3px);
 }
 
-/* ================================
-   INFO SECTION (Zig-Zag Layout)
-================================ */
 .info-section {
   background-color: #f8f8f8;
   padding: 4rem 2rem;
@@ -218,10 +201,6 @@ h1, h2, h3, h4, h5 {
   color: #555;
   line-height: 1.7;
 }
-
-/* ================================
-   RESPONSIVE DESIGN
-================================ */
 
 /* Tablet */
 @media (max-width: 1024px) {
