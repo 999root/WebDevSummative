@@ -36,14 +36,9 @@ app.post('/login', [
         let comments = req.body.comments;
         let passkey = req.body.passkey
 
-        let email_maker = {
-            from: "realundevgoals.noreply@gmail.com",
-            to: email,
-            subject: "This email have been signed-up for UN dev goals!",
-            text: `Dear ${first_name}\n\nThank you for signing up for the UN-development goals news.\nYou will receive the latest news about our work through this email.\nYou want to unsubscribe? Just email dconews@un.org about it.\n\n Do not forget you passkey: ${passkey}\n\nHave a nice day!`
-        }
 
-        sendEmail(email_maker);
+
+
 
 
         fs.readFile("storage.json", function (err, result) {
@@ -57,9 +52,27 @@ app.post('/login', [
                 "passkey": crypto.createHash("sha3-512").update(passkey).digest("hex")
             }
 
+            if (emailMatch(new_info, astring) == false) {
 
-            astring.push(new_info);
-            fs.writeFileSync("storage.json", JSON.stringify(astring));
+                let email_maker = {
+                    from: "realundevgoals.noreply@gmail.com",
+                    to: email,
+                    subject: "This email have been signed-up for UN dev goals!",
+                    text: `Dear ${first_name}\n\nThank you for signing up for the UN-development goals news.\nYou will receive the latest news about our work through this email.\nYou want to unsubscribe? Just email dconews@un.org about it.\n\n Do not forget you passkey: ${passkey}\n\nHave a nice day!`
+                }
+
+                astring.push(new_info);
+                fs.writeFileSync("storage.json", JSON.stringify(astring));
+                sendEmail(email_maker);
+            } else {
+                let email_maker = {
+                    from: "realundevgoals.noreply@gmail.com",
+                    to: email,
+                    subject: "This email have been signed-up for UN dev goals!",
+                    text: `Dear ${first_name}\n\nSomeone tried to use this email to re-sign you to the un development goals newsletter.\n\n There has not been change to your old passkey.\n\n Have a nice day!`
+                }
+                sendEmail(email_maker);
+            }
         }
         )
         res.json({ first_name: first_name, last_name: last_name, email: email, comments: comments });
@@ -77,6 +90,20 @@ function sendEmail(email_maker) {
             console.log("email sent");
         }
     })
+}
+
+
+
+//Checks if the email is already in the storage.json
+function emailMatch(new_info, astring) {
+    let result = false;
+    for (i of astring) {
+        if (i.email === new_info.email) {
+            result = true;
+
+        }
+    }
+    return result;
 }
 
 

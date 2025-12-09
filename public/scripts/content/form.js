@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const requestHeader = {
                     "Content-Type": "application/json"
                 };
+                
 
                 try {
                     fetch('/login', {
