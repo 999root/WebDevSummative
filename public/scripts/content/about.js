@@ -1,6 +1,5 @@
 let abouttitle = document.querySelector("#abouttitle");
 let table = document.querySelector("#team_table")
-console.log(abouttitle);
 abouttitle.textContent = "About us";
 let main = document.querySelector('#aboutsection');
 
@@ -8,7 +7,7 @@ let main = document.querySelector('#aboutsection');
 
 
 
-
+///Bios
 document.addEventListener('DOMContentLoaded', () => {
 
     fetch("scripts/json/about.json")
@@ -21,10 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
             name.textContent = i.Name;
             section.appendChild(name);
 
+            
+            let id = document.createElement('h2');
+            console.log(i.StudentID);
+            id.textContent = i.StudentID;
+            section.appendChild(id);
+
             let email = document.createElement('h2');
             email.textContent = i.Email;
             section.appendChild(email);
-
+            
 
             let bio = document.createElement('h2');
             bio.textContent = i.Bio;
@@ -44,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
     
-
+///Table
     fetch("scripts/json/table.json")
     .then(response => response.json())
     .then(info =>{
@@ -69,14 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
-   /* fetch(aboutjson)
-    .then(response => response.json())
-    .then(responseData => {
-        for (item of responseData){
-            const about = document.createElement('article');
-            main.appendChild(about)
-
-
-        }
-    })*/
+ 
 })

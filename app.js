@@ -7,11 +7,11 @@ const { body } = require("express-validator");
 const app = express();
 const port = 3000;
 
-app.use(express.static("public"));//
+app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-////nodemailer///
+////Nodemailer///
 
 let transport = nodemailer.createTransport({
     service: "gmail",
@@ -25,7 +25,7 @@ let transport = nodemailer.createTransport({
 
 
 
-////Saves the posted inforation in JSON & sends an Email///
+////Saves the posted information in JSON & sends an Email///
 app.post('/login', [
     body('passkey').isLength({ min: 7 })
 ]
@@ -67,7 +67,7 @@ app.post('/login', [
 
     })
 
-
+//Email function
 function sendEmail(email_maker) {
     console.log("Function called");
     transport.sendMail(email_maker, (err) => {

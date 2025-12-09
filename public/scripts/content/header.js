@@ -34,6 +34,7 @@ fetch("scripts/json/size_buttons.json")
         paragraphs = document.getElementsByTagName("p");
         links = document.getElementsByTagName("a");
         icons = document.getElementsByTagName("i");
+        table_values = document.getElementsByTagName("th");
 
         function capSize_header1() {
             if (header1_size > 35) {
@@ -83,6 +84,7 @@ fetch("scripts/json/size_buttons.json")
             sizeChange(paragraphs, paragraph_size);
             sizeChange(links, paragraph_size);
             sizeChange(icons, header1_size);
+            sizeChange(table_values, paragraph_size);
 
 
         })
@@ -102,6 +104,7 @@ fetch("scripts/json/size_buttons.json")
             sizeChange(paragraphs, paragraph_size);
             sizeChange(links, paragraph_size);
             sizeChange(icons, paragraph_size);
+            sizeChange(table_values, paragraph_size);
 
 
 

@@ -1,28 +1,32 @@
 [
     {
-        "Name": "Name: Nick",
+        "Name": "Name: Nicolas Kuye",
         "Email": "Email: N.Kuye@uea.ac.uk",
+        "StudentID": "Student ID: ",
         "Bio": "Bio: I love the environment",
         "Role": "Role: Making the about page, wireframing"
     },
 
     {
-        "Name": "Name: Martin",
+        "Name": "Name: Martin Nevyanov",
         "Email": "Email: M.Neyanov@uea.ac.uk",
+        "StudentID": "Student ID: 100523541",
         "Bio": "Bio: Live Love Laugh",
         "Role": "Role: sign up page, Sitemap, moodboard & Wireframing"
     },
 
     {
-        "Name": "Name: Benn",
+        "Name": "Name: Benn Pope",
         "Email": "Email: B.Pope@uea.ac.uk",
+        "StudentID": "Student ID: ",
         "Bio": "Bio: North London is Red",
         "Role":"Role: Index/Home page, Blog page & Wireframing"
     },
     
     {
-        "Name": "Name: Aurimas",
+        "Name": "Name: Aurimas Salina",
         "Email": "Email: A.Salina@uea.ac.uk",
+        "StudentID": "Student ID: ",
         "Bio": "Bio: I am very passionate when it comes to the wellbeing of our planet",
         "Role": "Role: Design of presentation, Article Page & Wireframing"
     }
