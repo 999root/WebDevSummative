@@ -18,7 +18,7 @@
     {
         "Name": "Name: Benn Pope",
         "Email": "Email: B.Pope@uea.ac.uk",
-        "StudentID": "Student ID: ",
+        "StudentID": "Student ID: 100514610",
         "Bio": "Bio: North London is Red",
         "Role":"Role: Index/Home page, Blog page & Wireframing"
     },
@@ -30,4 +30,5 @@
         "Bio": "Bio: I am very passionate when it comes to the wellbeing of our planet",
         "Role": "Role: Design of presentation, Article Page & Wireframing"
     }
+
 ]
