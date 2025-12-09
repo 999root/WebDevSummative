@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
 
-    //images..if you couldnt tell by the name idk
+    //images
     fetch(imageList)
         .then(response => response.json())
         .then(img => {
