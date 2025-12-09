@@ -3,20 +3,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     const response = await fetch('scripts/json/index.json');
     const data = await response.json();
-
-
-    // ================================
-    // HERO SECTION
-    // ================================
+    
     const heroTitle = document.querySelector('#hero-title h1');
     if (heroTitle && data.hero?.title) {
       heroTitle.textContent = data.hero.title;
     }
-
-
-    // ================================
-    // HOMEPAGE SLIDESHOW
-    // ================================
+    
     const powerpointImg = document.querySelector('#powerpoint figure img');
 
     if (powerpointImg && data.slideshow?.images?.length) {
@@ -54,10 +46,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       setInterval(slideToNextImage, slideInterval);
     }
 
-
-    // ================================
-    // HOMEPAGE GOALS
-    // ================================
     const goals = data.goals || [];
 
     goals.forEach((goal, index) => {
@@ -86,20 +74,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
 
-
-    // ================================
-    // VIEW ALL BUTTON
-    // ================================
     const viewGoalsButtonLink = document.querySelector('#button-container a');
     const viewGoalsButton = document.querySelector('#button-container a button');
 
     if (viewGoalsButtonLink) viewGoalsButtonLink.href = data.viewAll.href;
     if (viewGoalsButton) viewGoalsButton.textContent = data.viewAll.text;
 
-
-    // ================================
-    // INFO SECTION
-    // ================================
     const infoTitle = document.querySelector('#info-section h1');
     if (infoTitle) infoTitle.textContent = data.infoSection.title;
 

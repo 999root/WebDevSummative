@@ -86,9 +86,6 @@ nav ul li:hover > ul {
   display: none;
 }
 
-/* ===================== */
-/* RESPONSIVE MENU BELOW */
-/* ===================== */
 @media only screen and (max-width: 786px) {
   nav {
     padding: 10px 20px;

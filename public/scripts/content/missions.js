@@ -4,10 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('scripts/json/missions.json')
     .then(response => response.json())
     .then(missions => {
-
-      // ===============================
-      // BUILD MISSIONS
-      // ===============================
       missions.forEach(mission => {
         const article = document.createElement('article');
         article.className = 'mission-article';
@@ -31,17 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         h2.textContent = mission.title;
         textWrapper.appendChild(h2);
 
-        // ======================================
-        // DYNAMIC TEXT 
-        // ======================================
         const dynamicText = document.createElement('p');
         dynamicText.textContent = mission.paragraphs.issue;
         dynamicText.className = "mission-dynamic-text";
         textWrapper.appendChild(dynamicText);
 
-        // ======================================
-        // BUTTONS
-        // ======================================
         const buttonContainer = document.createElement("div");
         buttonContainer.className = "mission-buttons";
 
@@ -78,11 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         article.appendChild(contentWrapper);
         missionList.appendChild(article);
       });
-
-
-      // ===============================
-      // SCROLL TO MISSION AFTER RENDER
-      // ===============================
 
       function scrollToElementById(id) {
         const el = document.getElementById(id);
