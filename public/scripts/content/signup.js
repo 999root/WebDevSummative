@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //
-    // ================================
-    // FORM BACKEND
-    // ================================
-    //
+
     let myForm = document.querySelector('form')
     let myName = document.querySelector('#name')
     let myEmail = document.querySelector('#email')
